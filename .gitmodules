@@ -1,0 +1,15 @@
+[submodule "yazi"]
+	path = yazi
+	url = https://github.com/Hans2711/yazi
+[submodule "i3status-rust"]
+	path = i3status-rust
+	url = git@github.com:Hans2711/i3status-rust.git
+[submodule "i3"]
+	path = i3
+	url = git@github.com:Hans2711/i3.git
+[submodule "tmux"]
+	path = tmux
+	url = git@github.com:Hans2711/tmux.git
+[submodule "nvim"]
+	path = nvim
+	url = git@github.com:Hans2711/nvim.git

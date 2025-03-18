@@ -1,0 +1,277 @@
+{
+	email 8jhfh@test.org
+	auto_https off
+}
+
+http://martor.com.test, http://www.martor.com.test {
+	reverse_proxy http://localhost:1055
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/martor_com
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://club-mtv.de.test, http://d-live.de.test, http://merkur-spiel-arena.de.test, http://www.club-mtv.de.test, http://www.d-live.de.test, http://www.merkur-spiel-arena.de.test, http://psd-bank-dome.de.test, http://www.psd-bank-dome.de.test, http://d-sports.de.test, http://www.d-sports.de.test, http://www.rheinterrasse.de.test, http://rheinterrasse.de.test {
+	reverse_proxy http://localhost:1090
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/d_live_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://www.mitsubishi-electric-halle.de.test, http://mitsubishi-electric-halle.de.test {
+	reverse_proxy http://localhost:1026
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/d_live_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://gob.de.test, http://www.gob.de.test, http://cdn.gob.de.test {
+	reverse_proxy http://localhost:1069
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/gob_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://safechem.com.test, http://www.safechem.com.test {
+	reverse_proxy http://localhost:1031
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/safechem_com
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://dirk-piepenbrink.de.test, http://united-trade.eu.test, http://www.dirk-piepenbrink.de.test, http://www.united-trade.eu.test {
+	reverse_proxy http://localhost:1041
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/dirk-piepenbrink_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://jobs.klueh.de.test, http://www.jobs.klueh.de.test {
+	reverse_proxy http://localhost:1075
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/jobs_klueh_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://klueh.de.test, http://www.klueh.de.test {
+	reverse_proxy http://localhost:1078
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/klueh_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://klueh.de.test11, http://www.klueh.de.test11 {
+	reverse_proxy http://localhost:1046
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/klueh_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://eismann.de.test, http://eismann.it.test, http://eismann.nl.test, http://www.eismann.de.test, http://www.eismann.it.test, http://www.eismann.nl.test {
+	reverse_proxy http://localhost:1083
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/eismann_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://relaunch.eismann.de.test, http://relaunch.eismann.it.test, http://relaunch.eismann.nl.test, http://www.relaunch.eismann.de.test, http://www.relaunch.eismann.it.test, http://www.relaunch.eismann.nl.test {
+	reverse_proxy http://localhost:1093
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/eismann_de_up
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://eismannjobs.de.test, http://www.eismannjobs.de.test {
+	reverse_proxy http://localhost:1051
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/eismannjobs_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://de.eismannportal.com.test, http://eismannportal.com.test, http://it.eismannportal.com.test, http://nl.eismannportal.com.test, http://www.eismannportal.com.test {
+	reverse_proxy http://localhost:1061
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/eismannportal_com
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://de.old.eismannportal.com.test, http://old.eismannportal.com.test, http://www.de.old.eismannportal.com.test, http://www.old.eismannportal.com.test {
+	reverse_proxy http://localhost:1062
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/old_eismannportal_com
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://gewinnspiele.bauerfeind.de.test, http://www.gewinnspiele.bauerfeind.de.test {
+	reverse_proxy http://localhost:1073
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/gewinnspiele_bauerfeind_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://adgames.de.test, http://www.adgames.de.test {
+	reverse_proxy http://localhost:1064
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/adgames_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://niersverband.de.test, http://projekte.niersverband.de.test, http://www.niersverband.de.test, http://www.projekte.niersverband.de.test {
+	reverse_proxy http://localhost:1065
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/niersverband_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://glehner-whiskytasting.de.test, http://www.glehner-whiskytasting.de.test {
+	reverse_proxy http://localhost:1066
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/glehner_whiskytasting_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://aok-readytowork.de.test, http://www.aok-readytowork.de.test, https://www.aok-readytowork.de.test, https://aok-readytowork.de.test {
+	reverse_proxy http://localhost:1077
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/aok_readytowork_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://otg-handel.de.test, http://www.otg-handel.de.test {
+	reverse_proxy http://localhost:1070
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/otg_handel_de12
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://stadtwerke-strom-plauen.de.test, http://www.stadtwerke-strom-plauen.de.test {
+	reverse_proxy http://localhost:1085
+}
+
+http://mcs-medicalcenter.de.test, http://www.mcs-medicalcenter.de.test {
+	reverse_proxy http://localhost:1072
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/mcs_medicalcenter_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://senioren-mobile.de, http://www.senioren-mobile.de {
+	reverse_proxy http://localhost:1074
+}
+
+http://xn--elektromobilitt-jung-ozb.de.test, http://www.xn--elektromobilitt-jung-ozb.de.test {
+	reverse_proxy http://localhost:1074
+}
+
+https://xn--elektromobilitt-jung-ozb.de.test, https://www.xn--elektromobilitt-jung-ozb.de.test {
+	tls internal
+	reverse_proxy http://localhost:1074
+}
+
+http://bauerfeind.de.test, http://www.bauerfeind.de.test, http://bauerfeind.it.test, http://www.bauerfeind.it.test, http://www.bauerfeind-group.com.test, http://bauerfeind-group.com.test, http://bauerfeind.ch.test, http://www.bauerfeind.ch.test, http://bauerfeind.at.test, http://www.bauerfeind.at.test, http://bauerfeind.nl.test, http://www.bauerfeind.nl.test {
+	reverse_proxy http://localhost:1076
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/bauerfeind_de_12
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://ernst-hagen.de.test, http://www.ernst-hagen.de.test {
+	reverse_proxy http://localhost:1081
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/ernst_hagen_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://typo3.test, http://www.typo3.test {
+	reverse_proxy http://localhost:1082
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/typo3_test
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://akademie-wl.de.test, http://www.akademie-wl.de.test {
+    reverse_proxy http://localhost:1086
+}
+
+http://netigo.de.test, http://www.netigo.de.test {
+	reverse_proxy http://localhost:1087
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/netigo_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://lunge-allergie.de.test, http://www.lunge-allergie.de.test {
+	reverse_proxy http://localhost:1088
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/lunge_allergie_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://nachhaltigkeitspreis.de.test, http://www.nachhaltigkeitspreis.de.test {
+	reverse_proxy http://localhost:1089
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/nachhaltigkeitspreis_de
+		reverse_proxy http://localhost:9999
+	}
+}
+
+http://dr-wolff-partner.de.test, http://www.dr-wolff-partner.de.test, http://drwolffpartner.de.test, http://www.drwolffpartner.de.test, http://www.plantur39.com.test, http://plantur39.com.test {
+	reverse_proxy http://localhost:1092
+	handle_errors {
+		@error expression `{http.error.status_code} >= 400`
+		rewrite @error /command/startdockerproject/project/dr_wolff
+		reverse_proxy http://localhost:9999
+	}
+}
